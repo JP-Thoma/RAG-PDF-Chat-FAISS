@@ -12,7 +12,7 @@ from langchain import hub
 load_dotenv()
 
 if __name__ == "__main__":
-    print("Hi!")
+    #print("Hi!")
     pdf_path = "CashManagement_RFP.pdf"
     loader = PyPDFLoader(file_path=pdf_path)
     documents = loader.load()
@@ -39,5 +39,5 @@ if __name__ == "__main__":
         combine_docs_chain
     )
 
-    res = retrieval_chain.invoke({"input":"What does the RfP consist of?"})
+    res = retrieval_chain.invoke({"input":"Provide me with a complete list of Banking and Cash Management Services the university is interested in."})
     print(res["answer"])
